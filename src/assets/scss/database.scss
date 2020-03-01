@@ -1,0 +1,21 @@
+@import "~bulma/sass/utilities/initial-variables";
+// color
+$base-color-blue: #98d8e3;
+
+//scss repeat
+@mixin lineForHamburger {
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  position: absolute;
+}
+@mixin resetButton {
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  outline: none;
+}
+// overrided some bulma initial-variables
+
+$widescreen: (1230px + (2 * $gap));
+$fullhd: (1440px + (2 * $gap));

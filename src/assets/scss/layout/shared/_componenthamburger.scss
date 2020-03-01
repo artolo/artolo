@@ -1,0 +1,47 @@
+@import "~@/assets/scss/database";
+.component__hamburger {
+  &_line {
+    @include resetButton;
+    display: inline-block;
+    cursor: pointer;
+    &_box {
+      width: 35px;
+      height: 24px;
+      display: inline-block;
+      position: relative;
+    }
+    &_inner {
+      @include lineForHamburger;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: background-color .1s .2s ease-in-out;
+      &:before, &:after {
+        @include lineForHamburger;
+        content: '';
+        left: 0;
+        transition: transform .2s .2s ease-in-out;
+      }
+      &:before {
+        top: -10px;
+      }
+      &:after {
+        top: 10px;
+      }
+    }
+    &--active {
+      @include resetButton
+    }
+    &--active .component__hamburger_line_inner {
+      background-color: transparent;
+    }
+    &--active .component__hamburger_line_inner:before {
+      transform: translateY(10px) rotate(45deg);
+    }
+    &--active .component__hamburger_line_inner:after  {
+      transform: translateY(-10px) rotate(-45deg);
+    }
+  }
+}
+
+
