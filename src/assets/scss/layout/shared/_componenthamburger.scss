@@ -1,47 +1,132 @@
 @import "~@/assets/scss/database";
-.component__hamburger {
-  &_line {
-    @include resetButton;
-    display: inline-block;
-    cursor: pointer;
-    &_box {
-      width: 35px;
-      height: 24px;
-      display: inline-block;
-      position: relative;
-    }
-    &_inner {
-      @include lineForHamburger;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      transition: background-color .1s .2s ease-in-out;
-      &:before, &:after {
-        @include lineForHamburger;
-        content: '';
-        left: 0;
-        transition: transform .2s .2s ease-in-out;
+.header__box_top {
+  &_nav {
+    position: absolute;
+    right: 6rem;
+    &_items {
+      margin-top: 1.5rem;
+      max-width: 100%;
+      &_hamburger {
+        &_menu {
+          ul {
+            z-index: 5;
+            display: inline-flex;
+
+            li {
+              z-index: 5;
+              margin-left: 4rem;
+              list-style: none;
+              transition: all 2s ease;
+            }
+          }
+          &--active {
+            ul {
+              z-index: 5;
+              display: block;
+              position: relative;
+              li {
+                z-index: 999;
+                list-style: none;
+                margin-top: 5rem;
+                font-size: 2rem;
+                color: $base-color-white;
+                text-shadow: 1px 1px $base-color-grey;
+                text-transform: uppercase;
+                transition: all 5s ease;
+              }
+            }
+          }
+          &_backgraund {
+            height: 1rem;
+            width: 20rem;
+            position: absolute;
+            transition: all 2s ease;
+            display: block;
+            top: 0;
+          }
+          &--active .header__box_top_nav_items_hamburger_menu_backgraund {
+            display: block;
+            z-index: 1;
+            height: 100vh;
+            background: $base-color-blue;
+            top: 0;
+            width: 20rem;
+            position: absolute;
+            transition: all 2s ease;
+          }
+        }
+        &_line {
+          z-index: 11;
+          @include resetButton;
+          display: inline-block;
+          cursor: pointer;
+          &_box {
+            display: none;
+            width: 35px;
+            height: 24px;
+            position: relative;
+          }
+          &_inner {
+            @include lineForHamburger;
+            left: 0;
+            top: 50%;
+            z-index: 11;
+            transform: translateY(-50%);
+            transition: background-color .1s .2s ease-in-out;
+            &:before, &:after {
+              @include lineForHamburger;
+              content: '';
+              left: 0;
+              transition: transform .2s .2s ease-in-out;
+            }
+            &:before {
+              top: -10px;
+            }
+            &:after {
+              top: 10px;
+            }
+          }
+          &--active {
+            @include resetButton;
+          }
+          &--active .header__box_top_nav_items_hamburger_menu {
+            display: none;
+          }
+          &--active .header__box_top_nav_items_hamburger_line_inner {
+            background-color: transparent;
+          }
+          &--active .header__box_top_nav_items_hamburger_line_inner:before {
+            transform: translateY(10px) rotate(45deg);
+          }
+          &--active .header__box_top_nav_items_hamburger_line_inner:after {
+            transform: translateY(-10px) rotate(-45deg);
+          }
+        }
       }
-      &:before {
-        top: -10px;
+    }
+  }
+
+  @media only screen and (max-width: $desktop) {
+
+    &_nav {
+      &_items {
+        &_hamburger {
+          &_menu {
+            display: none;
+            &_backgraund {
+            }
+            &--active .header__box_top_nav_items_hamburger_menu_backgraund {
+              display: block;
+            }
+          }
+          &_line {
+            &_box {
+              top: 2rem;
+              display: inline-block;
+            }
+          }
+        }
       }
-      &:after {
-        top: 10px;
-      }
-    }
-    &--active {
-      @include resetButton
-    }
-    &--active .component__hamburger_line_inner {
-      background-color: transparent;
-    }
-    &--active .component__hamburger_line_inner:before {
-      transform: translateY(10px) rotate(45deg);
-    }
-    &--active .component__hamburger_line_inner:after  {
-      transform: translateY(-10px) rotate(-45deg);
     }
   }
 }
-
-

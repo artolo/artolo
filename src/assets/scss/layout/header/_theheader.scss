@@ -12,21 +12,6 @@
          width: 20rem;
        }
      }
-      &_nav {
-        position: absolute;
-        margin-left: 60%;
-        &_items {
-          margin-top: 1.5rem;
-          max-width: 100%;
-          ul {
-            display: inline-flex;
-            li {
-              margin-left: 4rem;
-              list-style: none;
-            }
-          }
-        }
-      }
     }
   }
 }

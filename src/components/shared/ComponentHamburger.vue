@@ -1,20 +1,13 @@
 <template>
   <div class="component__hamburger">
     <button
-    :class="hamburgerBox ? 'component__hamburger_line' : 'component__hamburger_line--active'"
+    :class="!hamburgerBox ? 'component__hamburger_line' : 'component__hamburger_line--active'"
     @click="hamburgerBoxActive"
   >
       <span class="component__hamburger_line_box">
         <span :class="'component__hamburger_line_inner'"></span>
     </span>
     </button>
-    <div class="'component__hamburger_navigation'">
-      <ul>
-        <li v-for="(item, index) in dataNav" :key="index">
-          {{item.name}}
-        </li>
-      </ul>
-    </div>
   </div>
 </template>
 
@@ -29,7 +22,6 @@ export default {
   props: {
     dataNav: {
       type: Array,
-      default: () => [],
     },
   },
   methods: {

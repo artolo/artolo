@@ -1,26 +1,40 @@
 <template>
   <div class="header__box_top_nav_items">
-    <component-hamburger
-      v-if="activeHamburger"
-      :data-nav="items"
-    />
-    <ul>
-      <li v-for="item in items" :key="item.name">
-        <p>{{item.name}}</p>
-      </li>
-    </ul>
+    <div class="header__box_top_nav_items_hamburger">
+      <button
+        :class="!hamburgerBox ? 'header__box_top_nav_items_hamburger_line' :
+        'header__box_top_nav_items_hamburger_line--active'"
+        @click="hamburgerBoxActive"
+      >
+      <span class="header__box_top_nav_items_hamburger_line_box">
+        <span :class="'header__box_top_nav_items_hamburger_line_inner'"></span>
+    </span>
+      </button>
+      <div :class="!hamburgerBox ? 'header__box_top_nav_items_hamburger_menu' :
+      'header__box_top_nav_items_hamburger_menu--active'">
+        <div class="columns is-vcentered">
+          <div class="column is-narrow">
+            <ul>
+              <li v-for="item in items" :key="item.id">
+                  {{ item.name }}
+              </li>
+            </ul>
+            <div class="header__box_top_nav_items_hamburger_menu_backgraund"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
-import ComponentHamburger from '@/components/shared/ComponentHamburger.vue';
 
 export default {
   name: 'HeaderTopNav',
   components: {
-    ComponentHamburger,
   },
   data() {
     return {
+      hamburgerBox: false,
       items: [
         {
           name: 'Home',
@@ -45,5 +59,13 @@ export default {
       return this.items;
     },
   },
+  methods: {
+    hamburgerBoxActive() {
+      this.hamburgerBox = !this.hamburgerBox;
+    },
+  },
 };
 </script>
+<style lang="scss">
+  @import "~@/assets/scss/layout/shared/_componenthamburger.scss";
+</style>
