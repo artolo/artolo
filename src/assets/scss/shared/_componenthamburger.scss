@@ -1,58 +1,49 @@
-@import "~@/assets/scss/database";
+@import "~@/assets/scss/database.scss";
 .header__box_top {
   &_nav {
-    position: absolute;
-    right: 6rem;
+    margin-top: 0.5rem;
+    grid-column: none;
     &_items {
-      margin-top: 1.5rem;
+      margin-top: 0;
       max-width: 100%;
       &_hamburger {
+        text-align-last: right;
+        margin-right: 2rem;
         &_menu {
           ul {
+            text-align-last: auto;
             z-index: 5;
             display: inline-flex;
-
+            margin-top: 1rem;
             li {
               z-index: 5;
               margin-left: 4rem;
               list-style: none;
-              transition: all 2s ease;
             }
+          }
+          a {
+            text-decoration: none;
+            color: $base-color-black;
+          }
+          &_backgraund {
+            display: none;
           }
           &--active {
             ul {
+              text-align-last: auto;
               z-index: 5;
-              display: block;
-              position: relative;
+              display: inline-flex;
+              margin-top: 1rem;
               li {
-                z-index: 999;
+                z-index: 5;
+                margin-left: 4rem;
                 list-style: none;
-                margin-top: 5rem;
-                font-size: 2rem;
-                color: $base-color-white;
-                text-shadow: 1px 1px $base-color-grey;
-                text-transform: uppercase;
-                transition: all 5s ease;
+                a {
+                  text-decoration: none;
+                  color: $base-color-black;
+                }
               }
             }
-          }
-          &_backgraund {
-            height: 1rem;
-            width: 20rem;
-            position: absolute;
-            transition: all 2s ease;
-            display: block;
-            top: 0;
-          }
-          &--active .header__box_top_nav_items_hamburger_menu_backgraund {
-            display: block;
-            z-index: 1;
-            height: 100vh;
-            background: $base-color-blue;
-            top: 0;
-            width: 20rem;
-            position: absolute;
-            transition: all 2s ease;
           }
         }
         &_line {
@@ -105,24 +96,55 @@
       }
     }
   }
-
   @media only screen and (max-width: $desktop) {
-
     &_nav {
       &_items {
+        margin-top: 1.5rem;
         &_hamburger {
           &_menu {
             display: none;
             &_backgraund {
+              height: 40rem;
+              border-radius: 40px;
+              padding-right: 1.8rem;
+              transition: all 0.5s ease;
+            }
+            &--active {
+              position: fixed;
+              top: 0;
+              right: 2rem;
+              ul {
+                display: block;
+                position: relative;
+                margin-right: 2rem;
+                li {
+                  z-index: 100;
+                  list-style: none;
+                  margin-top: 8rem;
+                  font-size: 1.2rem;
+                  color: $base-color-white;
+                  text-transform: uppercase;
+                  a {
+                    text-decoration: none;
+                    color: $base-color-white;
+                  }
+                }
+              }
             }
             &--active .header__box_top_nav_items_hamburger_menu_backgraund {
               display: block;
+              background: $base-color-black;
+              top: 1rem;
+              position: absolute;
+              width: 100vw;
+              border: 2px solid white;
             }
           }
           &_line {
             &_box {
-              top: 2rem;
-              display: inline-block;
+              cursor: pointer;
+              top: 1rem;
+              display: block;
             }
           }
         }

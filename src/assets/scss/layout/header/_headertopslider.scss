@@ -2,8 +2,34 @@
   &__slider {
     &_area {
       &_box {
-        img {
-          width: 100%;
+        margin-top: 20rem;
+        &_bg {
+          animation: slide 6s ease-in-out infinite alternate;
+          background-image: linear-gradient(-60deg, #14ccc4 50%, #09f 50%);
+          bottom: 0;
+          left: -50%;
+          opacity: 0.5;
+          position: absolute;
+          right: -50%;
+          margin-top: 7rem;
+          height: 50%;
+          top: 0;
+          z-index: -1;
+        }
+        .bg2 {
+          animation-direction:alternate-reverse;
+          animation-duration:6s;
+        }
+        .bg3 {
+          animation-duration:8s;
+        }
+        @keyframes slide {
+          0% {
+            transform:translateX(-25%);
+          }
+          100% {
+            transform:translateX(25%);
+          }
         }
       }
     }

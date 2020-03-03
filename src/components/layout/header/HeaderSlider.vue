@@ -2,7 +2,10 @@
   <div class="header__slider_area">
     <div class="container">
       <div class="header__slider_area_box">
-        <img src="../../../assets/img/baner_artolo_test4.jpg"/></div>
+        <div class="header__slider_area_box_bg"></div>
+        <div class="header__slider_area_box_bg bg2"></div>
+        <div class="header__slider_area_box_bg bg3"></div>
+      </div>
     </div>
   </div>
 </template>

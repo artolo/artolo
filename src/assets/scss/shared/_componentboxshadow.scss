@@ -1,0 +1,52 @@
+@import "~@/assets/scss/database.scss";
+.componentboxshadow {
+  max-width: 1440px;
+  margin: 0 auto 3rem auto;
+  text-align: center;
+  &__conteiner {
+    display: inline-flex;
+    width: 80%;
+    &_box{
+      padding: 2rem;
+      &_shadow {
+        min-height: 10rem;
+        border-radius: 20px;
+        box-sizing: border-box;
+        padding: 2rem;
+        margin-right: auto;
+        margin-left: auto;
+        box-shadow: -1px 2px 37px -9px rgba(0, 0, 0, 0.2);
+        transition: all 1s ease-in-out;
+        background-color: white;
+        &:hover {
+          box-shadow: none;
+        }
+        img {
+          width: 2rem;
+        }
+        &_line {
+          width: 60%;
+          height: 0.1rem;
+          background-color: #98d8e3;
+          margin-top: 0.5rem;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        p {
+          text-align: center;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $desktop) {
+    &__conteiner {
+      display: block;
+      width: 100%;
+      &_box {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}

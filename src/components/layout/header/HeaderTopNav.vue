@@ -16,7 +16,9 @@
           <div class="column is-narrow">
             <ul>
               <li v-for="item in items" :key="item.id">
+                <router-link :to="{name: item.routeName}">
                   {{ item.name }}
+                </router-link>
               </li>
             </ul>
             <div class="header__box_top_nav_items_hamburger_menu_backgraund"></div>
@@ -38,12 +40,15 @@ export default {
       items: [
         {
           name: 'Home',
+          routeName: 'homepage',
         },
         {
           name: 'Oferta',
+          routeName: 'about',
         },
         {
           name: 'Realizacje',
+          routeName: 'portfolio',
         },
       ],
     };
@@ -67,5 +72,5 @@ export default {
 };
 </script>
 <style lang="scss">
-  @import "~@/assets/scss/layout/shared/_componenthamburger.scss";
+  @import "~@/assets/scss/shared/_componenthamburger.scss";
 </style>

@@ -1,17 +1,29 @@
+@import "~@/assets/scss/database";
 .header {
   &__box {
-    min-width: 920px;
-    width: 90%;
-    max-width: 1920px;
+    max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
     &_top {
-      display: inline-flex;
+      display: grid;
      &_logo {
        svg {
-         width: 20rem;
+         width: 45%;
+         transition: all 0.5s ease;
        }
      }
+    }
+  }
+  @media only screen and (max-width: $desktop) {
+    &__box {
+      &_top {
+        &_logo {
+          svg {
+            width: 13rem;
+            margin-top: 1rem;
+          }
+        }
+      }
     }
   }
 }

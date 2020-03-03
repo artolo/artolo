@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="appconteiner">
+    <div class="app__conteiner">
       <the-header/>
       <the-main/>
       <the-footer/>
@@ -25,5 +25,6 @@ export default {
   body {
     margin: 0;
     font-family: Lato, sans-serif;
+    overflow-x: hidden;
   }
 </style>
