@@ -17,11 +17,21 @@
           z-index: -1;
         }
         .bg2 {
+          left: -50%;
+          right: -50%;
           animation-direction:alternate-reverse;
           animation-duration:6s;
         }
         .bg3 {
           animation-duration:8s;
+        }
+        .bg4 {
+          animation: none;
+          left: 0;
+          right: 0;
+          opacity: 0.1;
+          background-image: url('../../../assets/img/baner_artolo1.jpg');
+          background-repeat: no-repeat
         }
         @keyframes slide {
           0% {

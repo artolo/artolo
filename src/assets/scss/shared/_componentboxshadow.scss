@@ -1,15 +1,13 @@
 @import "~@/assets/scss/database.scss";
 .componentboxshadow {
-  max-width: 1440px;
-  margin: 0 auto 3rem auto;
   text-align: center;
   &__conteiner {
-    display: inline-flex;
-    width: 80%;
+    display: inline-block;
     &_box{
       padding: 2rem;
       &_shadow {
-        min-height: 10rem;
+        min-height: 12rem;
+        max-width: 22rem;
         border-radius: 20px;
         box-sizing: border-box;
         padding: 2rem;
@@ -41,11 +39,10 @@
   @media only screen and (max-width: $desktop) {
     &__conteiner {
       display: block;
-      width: 100%;
       &_box {
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
+        &_shadow {
+          max-width: 100%;
+        }
       }
     }
   }

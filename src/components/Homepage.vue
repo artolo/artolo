@@ -1,12 +1,13 @@
 <template>
-    <div class="homepage">
+    <div class="homepage__box">
       <section>
-        <component-box-shadow
-          :box-label-one="webText"
-          :srcOne="'cart'"
-          :box-label-two="webText"
-          :box-label-three="webText"
-        />
+        <div class="homepage__box_shadows" v-for="(item, index) in items" :key="index">
+            <component-box-shadow
+              class="homepage__box_shadows_component"
+              :box-shadow-text="item.text"
+              :icon="item.icon"
+            />
+        </div>
       </section>
     </div>
 </template>
@@ -21,7 +22,32 @@ export default {
   },
   data() {
     return {
-      webText: 'Zaprezentuj profesjonalnie swoją ofertę w Internecie. Kompleksowo budujemy nowe strony i modernizujemy już istniejące.',
+      items: [
+        {
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo in nunc in tincidunt. Vivamus scelerisque arcu ut finibus...',
+          icon: 'shopping-cart',
+        },
+        {
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo in nunc in tincidunt. Vivamus scelerisque arcu ut finibus...',
+          icon: 'globe',
+        },
+        {
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo in nunc in tincidunt. Vivamus scelerisque arcu ut finibus...',
+          icon: 'phone',
+        },
+        {
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo in nunc in tincidunt. Vivamus scelerisque arcu ut finibus...',
+          icon: 'person',
+        },
+        {
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo in nunc in tincidunt. Vivamus scelerisque arcu ut finibus...',
+          icon: 'arrow-down',
+        },
+        {
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo in nunc in tincidunt. Vivamus scelerisque arcu ut finibus...',
+          icon: 'facebook',
+        },
+      ],
     };
   },
 };

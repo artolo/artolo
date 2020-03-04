@@ -1,2 +1,20 @@
+@import "~@/assets/scss/database.scss";
 .homepage{
+  &__box {
+    max-width: 1440px;
+    margin: auto;
+    &_shadows {
+      width: 33%;
+      display: inline-flex;
+      &_component {
+      }
+    }
+  }
+  @media only screen and (max-width: $desktop) {
+    &__box {
+      &_shadows {
+        display: inline;
+      }
+    }
+  }
 }

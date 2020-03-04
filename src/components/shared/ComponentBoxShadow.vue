@@ -1,26 +1,18 @@
 <template>
 <div class="componentboxshadow">
   <div class="componentboxshadow__conteiner">
-    <div class="componentboxshadow__conteiner_box" v-if="boxLabelOne">
+    <div
+      class="componentboxshadow__conteiner_box"
+      v-if="boxShadowText"
+    >
       <div class="componentboxshadow__conteiner_box_shadow">
-        <img src="../../assets/img/iconfinder_shopping_cart.png" alt="phone"/>
+        <img
+          :src="require(`@/assets/img/${icon}.png`)"
+          :alt="icon"
+        />
         <div class="componentboxshadow__conteiner_box_shadow_line">
         </div>
-        <p>{{boxLabelOne}}</p>
-      </div>
-    </div>
-    <div class="componentboxshadow__conteiner_box" v-if="boxLabelTwo">
-      <div class="componentboxshadow__conteiner_box_shadow">
-        <img src="../../assets/img/iconfinder_globe.png" alt="globe"/>
-        <div class="componentboxshadow__conteiner_box_shadow_line"></div>
-        <p>{{boxLabelTwo}}</p>
-      </div>
-    </div>
-    <div class="componentboxshadow__conteiner_box" v-if="boxLabelThree">
-      <div class="componentboxshadow__conteiner_box_shadow">
-        <img src="../../assets/img/iconfinder_phone.png" alt="card"/>
-        <div class="componentboxshadow__conteiner_box_shadow_line" width="20%"></div>
-        <p>{{boxLabelThree}}</p>
+        <p>{{boxShadowText}}</p>
       </div>
     </div>
   </div>
@@ -31,15 +23,15 @@
 export default {
   name: 'component-box-shadow',
   props: {
-    boxLabelOne: {
+    boxShadowText: {
       type: String,
       required: true,
     },
-    boxLabelTwo: {
+    icon: {
+      // arrow-down, arrow-down, close, earth, facebook, gear, globe,
+      // mail, person, phone,search, share, shopping-cart, telephone
       type: String,
-    },
-    boxLabelThree: {
-      type: String,
+      required: true,
     },
   },
 };

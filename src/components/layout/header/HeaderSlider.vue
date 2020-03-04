@@ -5,6 +5,7 @@
         <div class="header__slider_area_box_bg"></div>
         <div class="header__slider_area_box_bg bg2"></div>
         <div class="header__slider_area_box_bg bg3"></div>
+        <div class="header__slider_area_box_bg bg4"></div>
       </div>
     </div>
   </div>

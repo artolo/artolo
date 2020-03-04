@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer class="footer">
     <div class="columns is-vcentered">
       <div class="column is-narrow">
         <div class="footer__text"></div>
