@@ -1,7 +1,11 @@
 @import "~bulma/sass/utilities/initial-variables";
 // color
 $base-color-blue: #98d8e3;
+$base-color-expressive-blue: #30cafa;
+$base-color-dark-blue: #1261a0;
+$base-color-navy-blue: #072f5f;
 $base-color-white: #ffffff;
+$base-light-gray: #F5F5F5;
 $base-color-grey: #ababab;
 $base-color-black: #000000;
 //scss repeat
@@ -16,5 +20,16 @@ $base-color-black: #000000;
   border: 0;
   margin: 0;
   outline: none;
+}
+@mixin animatedscrollY {
+  .before-animatedscroll {
+    opacity: 0;
+    transform: translateY(200px);
+    transition: all 0.5s ease-out;
+  }
+  .animatedscroll{
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 

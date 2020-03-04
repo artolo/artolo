@@ -1,7 +1,7 @@
 @import "~@/assets/scss/database.scss";
-.componentboxshadow {
+.component__boxshadow {
   text-align: center;
-  &__conteiner {
+  &_container {
     display: inline-block;
     &_box{
       padding: 2rem;
@@ -37,7 +37,7 @@
     }
   }
   @media only screen and (max-width: $desktop) {
-    &__conteiner {
+    &_container {
       display: block;
       &_box {
         &_shadow {

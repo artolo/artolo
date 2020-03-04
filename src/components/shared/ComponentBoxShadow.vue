@@ -1,16 +1,16 @@
 <template>
-<div class="componentboxshadow">
-  <div class="componentboxshadow__conteiner">
+<div class="component__boxshadow">
+  <div class="component__boxshadow_container">
     <div
-      class="componentboxshadow__conteiner_box"
+      class="component__boxshadow_container_box"
       v-if="boxShadowText"
     >
-      <div class="componentboxshadow__conteiner_box_shadow">
+      <div class="component__boxshadow_container_box_shadow">
         <img
           :src="require(`@/assets/img/${icon}.png`)"
           :alt="icon"
         />
-        <div class="componentboxshadow__conteiner_box_shadow_line">
+        <div class="component__boxshadow_container_box_shadow_line">
         </div>
         <p>{{boxShadowText}}</p>
       </div>

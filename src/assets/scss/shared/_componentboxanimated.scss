@@ -1,0 +1,49 @@
+@import "~@/assets/scss/database.scss";
+.component{
+  &__boxanimated {
+    background-color: $base-color-blue;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    height: 60%;
+    &--expresive-blue{
+      background-color: $base-color-expressive-blue;
+    }
+    &--dark-blue{
+      background-color: $base-color-dark-blue;
+    }
+    &--navy-blue{
+      background-color: $base-color-navy-blue;
+    }
+    &--light-grey{
+      background-color: $base-light-gray;
+    }
+    &--grey{
+      background-color: $base-color-grey;
+    }
+    &_animation {
+      margin-top: -3rem;
+    }
+    @include animatedscrollY;
+    @media only screen and (max-width: 1700px)  {
+      height: 50%;
+      &_animation {
+        width: 90rem;
+      }
+    }
+    @media only screen and (max-width: 1450px)  {
+      &_animation {
+        width: 100%;
+      }
+    }
+    @media only screen and (max-width: 1110px)  {
+      height: 40%
+    }
+    @media only screen and (max-width: 1110px)  {
+      height: 30%
+    }
+    @media only screen and (max-width: 800px)  {
+      height: 10%
+    }
+  }
+}

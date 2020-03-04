@@ -22,9 +22,5 @@ export default {
 };
 </script>
 <style lang="scss">
-  body {
-    margin: 0;
-    font-family: Lato, sans-serif;
-    overflow-x: hidden;
-  }
+  @import "~@/assets/scss/_app.scss";
 </style>

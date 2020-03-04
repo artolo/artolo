@@ -9,16 +9,32 @@
             />
         </div>
       </section>
+      <section>
+        <div class="homepage__box_text" v-animatedScroll>
+          <h1>Lorem Ipsum</h1>
+          <p>{{textContent}}</p>
+        </div>
+      </section>
+      <section>
+        <div class="homepage__box_animated">
+          <component-box-animated
+            :img="'artolo-home-web'"
+            :shades-of-blue="'expresive-blue'"
+          />
+        </div>
+      </section>
     </div>
 </template>
 
 <script>
 import ComponentBoxShadow from '@/components/shared/ComponentBoxShadow.vue';
+import ComponentBoxAnimated from '@/components/shared/ComponentBoxAnimated.vue';
 
 export default {
   name: 'Homepage',
   components: {
     ComponentBoxShadow,
+    ComponentBoxAnimated,
   },
   data() {
     return {
@@ -48,6 +64,10 @@ export default {
           icon: 'facebook',
         },
       ],
+      textContent: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin mollis diam.'
+        + 'Sed pellentesque velit non mollis blandit. Suspendisse diam ligula, dictum et diam et, consectetur'
+        + 'eleifend enim. Nam vulputate vel neque sed tincidunt. Morbi feugiat lectus sed erat gravida, nec'
+        + 'ultrices lectus faucibus. Cras vestibulum euismod orci, in suscipit ligula rhoncus maximus.',
     };
   },
 };
