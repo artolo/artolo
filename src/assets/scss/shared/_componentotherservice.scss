@@ -1,0 +1,77 @@
+@import "~@/assets/scss/database.scss";
+
+.component__otherservice {
+  @include animatedscrollY;
+  width: 100%;
+  margin-top: 18rem;
+  text-align: left;
+  padding: 0 4rem;
+  display: inline-flex;
+  &_text {
+    h3 {
+      font-size: 3rem;
+      font-weight: 100;
+      color: $base-color-grey;
+      margin: 0.5rem 0;
+    }
+    ul {
+      margin-top: 4rem;
+      padding: 0;
+      display: grid;
+      li {
+        max-width: 35rem;
+        list-style: none;
+        display: inline-flex;;
+        img {
+          width: 5rem;
+          height: 5rem;
+          margin: 2.5rem 2rem 0 1rem;
+        }
+        span {
+          width: 30rem;
+          margin: 2rem 0;
+        }
+      }
+    }
+  }
+  &_web {
+    &_photo {
+      margin-top: 10rem;
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: 1100px) {
+    &_text {
+      ul {
+        li {
+          width: 80%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+    padding: 0;
+    display: block;
+    text-align: center;
+    &_web {
+      &_photo {
+        margin-top: 0;
+        width: 100%;
+      }
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    margin-top: 27rem;
+    &_text {
+      ul {
+        li {
+          display: block;
+          img {
+            margin: 2rem auto;
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+}

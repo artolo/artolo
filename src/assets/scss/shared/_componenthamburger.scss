@@ -3,6 +3,7 @@
   &_nav {
     margin-top: 0.5rem;
     grid-column: none;
+    z-index: 999;
     &_items {
       margin-top: 0;
       max-width: 100%;
@@ -85,6 +86,10 @@
           }
           &--active .header__box_top_nav_items_hamburger_line_inner {
             background-color: transparent;
+            position: fixed;
+            width: 2rem;
+            margin-left: 56.5rem;
+            margin-top: -25.5rem;
           }
           &--active .header__box_top_nav_items_hamburger_line_inner:before {
             transform: translateY(10px) rotate(45deg);
@@ -126,18 +131,18 @@
                   text-transform: uppercase;
                   a {
                     text-decoration: none;
-                    color: $base-color-white;
+                    color: $base-color-blue;
                   }
                 }
               }
             }
             &--active .header__box_top_nav_items_hamburger_menu_backgraund {
               display: block;
-              background-image: linear-gradient(-60deg, rgba(52,54,55,0.9948354341736695) 2%, rgba(106,114,115,1) 33%, rgba(0,0,0,1) 100%);
+              background-color: $base-color-ghost-white;
               top: 1rem;
               position: absolute;
               width: 100vw;
-              border: 2px solid white;
+              border: 2px solid $base-color-blue;
             }
           }
           &_line {

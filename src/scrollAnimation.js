@@ -1,10 +1,9 @@
 const animatedScroll = new IntersectionObserver(
-  (entries) => {
+  (entries, animatedScrollObserver) => {
     entries.forEach((entry) => {
       if (entry.intersectionRatio > 0) {
         entry.target.classList.add('animatedscroll');
-      } else {
-        entry.target.classList.remove('animatedscroll');
+        animatedScrollObserver.unobserve(entry.target);
       }
     });
   },

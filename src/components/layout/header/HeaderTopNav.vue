@@ -42,14 +42,14 @@ export default {
           name: 'Home',
           routeName: 'homepage',
         },
-        {
+        /* {
           name: 'Oferta',
           routeName: 'about',
         },
         {
           name: 'Realizacje',
           routeName: 'portfolio',
-        },
+        }, */
       ],
     };
   },

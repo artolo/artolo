@@ -10,8 +10,9 @@
           :src="require(`@/assets/img/${icon}.png`)"
           :alt="icon"
         />
-        <div class="component__boxshadow_container_box_shadow_line">
-        </div>
+        <component-separator
+          :short="true"
+        />
         <p>{{boxShadowText}}</p>
       </div>
     </div>
@@ -20,8 +21,11 @@
 </template>
 
 <script>
+import ComponentSeparator from '@/components/shared/ComponentSeparator.vue';
+
 export default {
   name: 'component-box-shadow',
+  components: { ComponentSeparator },
   props: {
     boxShadowText: {
       type: String,

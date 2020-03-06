@@ -1,0 +1,17 @@
+@import "~@/assets/scss/database.scss";
+.footer {
+  max-width: 1440px;
+  text-align: center;
+  margin: 8rem auto 0 auto;
+  &__box {
+    &:before {
+      content: '';
+      background-image: linear-gradient(-60deg, $base-color-navy-blue 50%, $base-color-full-blue 50%);
+      width: 100%;
+      position: absolute;
+      left: 0;
+      height: 40rem;
+      z-index: -2;
+    }
+  }
+}

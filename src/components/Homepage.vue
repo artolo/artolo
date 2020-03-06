@@ -8,6 +8,7 @@
               :icon="item.icon"
             />
         </div>
+        <component-separator/>
       </section>
       <section>
         <div class="homepage__box_text" v-animatedScroll>
@@ -23,18 +24,34 @@
           />
         </div>
       </section>
+      <section>
+        <div class="homepage__box_tootsy">
+          <component-tootsy/>
+        </div>
+      </section>
+      <section>
+        <div class="homepage__otherservice">
+          <component-other-services/>
+        </div>
+      </section>
     </div>
 </template>
 
 <script>
 import ComponentBoxShadow from '@/components/shared/ComponentBoxShadow.vue';
 import ComponentBoxAnimated from '@/components/shared/ComponentBoxAnimated.vue';
+import ComponentTootsy from '@/components/shared/ComponentTootsy.vue';
+import ComponentSeparator from '@/components/shared/ComponentSeparator.vue';
+import ComponentOtherServices from '@/components/shared/ComponentOtherServices.vue';
 
 export default {
   name: 'Homepage',
   components: {
+    ComponentOtherServices,
     ComponentBoxShadow,
     ComponentBoxAnimated,
+    ComponentTootsy,
+    ComponentSeparator,
   },
   data() {
     return {
@@ -49,19 +66,7 @@ export default {
         },
         {
           text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo in nunc in tincidunt. Vivamus scelerisque arcu ut finibus...',
-          icon: 'phone',
-        },
-        {
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo in nunc in tincidunt. Vivamus scelerisque arcu ut finibus...',
-          icon: 'person',
-        },
-        {
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo in nunc in tincidunt. Vivamus scelerisque arcu ut finibus...',
-          icon: 'arrow-down',
-        },
-        {
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo in nunc in tincidunt. Vivamus scelerisque arcu ut finibus...',
-          icon: 'facebook',
+          icon: 'gear',
         },
       ],
       textContent: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sollicitudin mollis diam.'

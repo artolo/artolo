@@ -2,9 +2,12 @@
 // color
 $base-color-blue: #98d8e3;
 $base-color-expressive-blue: #30cafa;
+$base-color-full-blue: #0099ff;
 $base-color-dark-blue: #1261a0;
 $base-color-navy-blue: #072f5f;
+$base-color-sea: #14ccc4;
 $base-color-white: #ffffff;
+$base-color-ghost-white: #f8f8ff;
 $base-light-gray: #F5F5F5;
 $base-color-grey: #ababab;
 $base-color-black: #000000;
@@ -25,7 +28,7 @@ $base-color-black: #000000;
   .before-animatedscroll {
     opacity: 0;
     transform: translateY(200px);
-    transition: all 0.5s ease-out;
+    transition: all 1s ease-out;
   }
   .animatedscroll{
     opacity: 1;

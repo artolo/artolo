@@ -1,9 +1,6 @@
 <template>
   <footer class="footer">
-    <div class="columns is-vcentered">
-      <div class="column is-narrow">
-        <div class="footer__text"></div>
-      </div>
+    <div class="footer__box">
     </div>
   </footer>
 </template>
@@ -20,6 +17,6 @@ export default {
 };
 </script>
 
-<style scoped>
-
+<style lang="scss">
+  @import "~@/assets/scss/layout/footer/_thefooter.scss";
 </style>

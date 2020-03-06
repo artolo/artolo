@@ -1,0 +1,51 @@
+@import "~@/assets/scss/database.scss";
+.component__tootsy {
+  &_background {
+    content: '';
+    background-color: $base-color-navy-blue;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 20rem;
+    margin-top: -10rem;
+    z-index: -1;
+  }
+  &_grid {
+    &_text {
+      position: absolute;
+      margin-top: -5rem;
+      left: 0;
+      right: 0;
+    }
+    &_separator {
+      color: red;
+    }
+    &_point {
+      width: 3rem;
+    }
+    p {
+      max-width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: 300;
+      color: $base-color-white;
+    }
+  }
+  @media only screen and (max-width: 1270px) {
+    margin-top: 5rem;
+  }
+  @media only screen and (max-width: 780px) {
+    &_background {
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    margin-top: 10rem;
+    &_grid {
+      &_text {
+        margin-top: -8rem;
+      }
+    }
+  }
+}
