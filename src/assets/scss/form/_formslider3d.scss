@@ -1,0 +1,58 @@
+.form__silder3d {
+  &_slide, &_slide--hidden {
+    p {
+      font-size: 2rem;
+      font-weight: 200;
+      color: white;
+      position: absolute;
+      margin-top: -30rem;
+      right: 20vw;
+    }
+    .carousel-3d-container {
+      min-height: 1px;
+      width: 100%;
+      overflow: hidden;
+      box-sizing: border-box;
+      position: absolute;
+      left: 15%;
+      margin-top: -25rem;
+      z-index: 100;
+    }
+  }
+  @media only screen and (max-width: 1800px) {
+    &_slide--hidden {
+      .left-2 {
+        display: none;
+      }
+      .right-2 {
+        display: none;
+      }
+    }
+  }
+  @media only screen and (max-width: 1350px) {
+    &_slide--hidden {
+      .carousel-3d-container {
+        left: 20%;
+      }
+    }
+  }
+  @media only screen and (max-width: 1170px) {
+    &_slide--hidden {
+      .left-1 {
+        display: none;
+      }
+    }
+  }
+  @media only screen and (max-width: 1100px) {
+    &_slide--hidden {
+      p {
+        display: none;
+      }
+
+      .carousel-3d-container {
+        display: none;
+      }
+    }
+  }
+}
+

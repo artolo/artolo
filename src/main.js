@@ -4,11 +4,14 @@ import App from '@/App.vue';
 import router from '@/router';
 import store from '@/store';
 import Meta from 'vue-meta';
+import Carousel3d from 'vue-carousel-3d';
+import 'sweetalert2/dist/sweetalert2.min.css';
 
 Vue.directive('animatedScroll', animatedScroll);
 
 Vue.config.productionTip = false;
 Vue.use(Meta);
+Vue.use(Carousel3d);
 
 new Vue({
   metaInfo: {
