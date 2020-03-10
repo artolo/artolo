@@ -88,7 +88,7 @@
             background-color: transparent;
             position: fixed;
             width: 2rem;
-            margin-left: 56.5rem;
+            margin-left: 90%;
             margin-top: -25.5rem;
           }
           &--active .header__box_top_nav_items_hamburger_line_inner:before {
@@ -110,7 +110,6 @@
             display: none;
             &_backgraund {
               height: 40rem;
-              border-radius: 40px;
               padding-right: 1.8rem;
               transition: all 0.5s ease;
             }
@@ -138,11 +137,13 @@
             }
             &--active .header__box_top_nav_items_hamburger_menu_backgraund {
               display: block;
-              background-color: $base-color-ghost-white;
-              top: 1rem;
+              background-color: $base-color-graphite;
+              opacity: 0.9;
+              top: 0;
+              left: 0;
               position: absolute;
               width: 100vw;
-              border: 2px solid $base-color-blue;
+              height: 100vh;
             }
           }
           &_line {

@@ -1,40 +1,43 @@
 <template>
-    <div class="homepage__box">
-      <section>
-        <div class="homepage__box_shadows" v-for="(item, index) in items" :key="index">
-            <component-box-shadow
-              class="homepage__box_shadows_component"
-              :box-shadow-text="item.text"
-              :icon="item.icon"
-            />
-        </div>
-        <component-separator/>
-      </section>
-      <section>
-        <div class="homepage__box_text" v-animatedScroll>
-          <h1>Lorem Ipsum</h1>
-          <p>{{textContent}}</p>
-        </div>
-      </section>
-      <section>
-        <div class="homepage__box_animated">
-          <component-box-animated
-            :img="'artolo-home-web'"
-            :shades-of-blue="'expresive-blue'"
+  <div class="homepage__box">
+    <section>
+      <div class="homepage__box_shadows" v-for="(item, index) in items" :key="index">
+          <component-box-shadow
+            class="homepage__box_shadows_component"
+            :box-shadow-text="item.text"
+            :icon="item.icon"
           />
-        </div>
-      </section>
-      <section>
-        <div class="homepage__box_tootsy">
-          <component-tootsy/>
-        </div>
-      </section>
-      <section>
-        <div class="homepage__otherservice">
-          <component-other-services/>
-        </div>
-      </section>
-    </div>
+      </div>
+      <component-separator/>
+    </section>
+    <section>
+      <div class="homepage__box_text" v-animatedScroll>
+        <h1>Lorem Ipsum</h1>
+        <p>{{textContent}}</p>
+      </div>
+    </section>
+    <section>
+      <div class="homepage__box_animated">
+        <component-box-animated
+          :img="'artolo-home-web'"
+          :shades-of-blue="'expresive-blue'"
+        />
+      </div>
+    </section>
+    <section>
+      <div class="homepage__box_tootsy">
+        <component-tootsy
+          :tootsy-text="textTootsy"
+          :tootsy-icon="'feature-icon-02'"
+        />
+      </div>
+    </section>
+    <section>
+      <div class="homepage__otherservice">
+        <component-other-services/>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
@@ -73,6 +76,10 @@ export default {
         + 'Sed pellentesque velit non mollis blandit. Suspendisse diam ligula, dictum et diam et, consectetur'
         + 'eleifend enim. Nam vulputate vel neque sed tincidunt. Morbi feugiat lectus sed erat gravida, nec'
         + 'ultrices lectus faucibus. Cras vestibulum euismod orci, in suscipit ligula rhoncus maximus.',
+      textTootsy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n'
+        + 'Morbi sollicitudin mollis diam. Sed pellentesque velit non mollis blandit.\n'
+        + 'Suspendisse diam ligula, dictum et diam et, consectetureleifend enim. Nam vulputate\n'
+        + 'vel neque sed tincidunt.',
     };
   },
 };

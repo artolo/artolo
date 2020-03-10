@@ -23,3 +23,6 @@ export default {
   name: 'component-logo',
 };
 </script>
+<style lang="scss">
+  @import "~@/assets/scss/shared/_componentlogo.scss";
+</style>

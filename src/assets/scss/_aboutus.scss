@@ -1,0 +1,35 @@
+@import "~@/assets/scss/database.scss";
+.aboutus {
+  max-width: 1440px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  &__content {
+    &_top {
+      display: flex;
+      margin-top: 37rem;
+      &_avatar {
+        margin-top: 3rem;
+        img {
+          width: 50%;
+        }
+      }
+      &_text {
+        width: 45rem;
+        margin-right: 3rem;
+        h4 {
+          text-align: left;
+          font-size: 3rem;
+          text-transform: uppercase;
+          font-weight: 200;
+          color: $base-color-grey;
+        }
+        p {
+          font-size: 1.7rem;
+          text-align: left;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}

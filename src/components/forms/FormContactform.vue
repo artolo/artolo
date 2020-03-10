@@ -53,8 +53,9 @@
 
 <script>
 import emailjs from 'emailjs-com';
+import swal from 'sweetalert';
 
-// eslint-disable-next-line no-useless-escape
+// eslint-disable-next-line no-useless-escape,max-len
 const emailRegExp = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 
 export default {
@@ -78,11 +79,24 @@ export default {
   methods: {
     sendEmail: (data) => {
       emailjs.sendForm('artolo.bartosz.bracel@gmail.com', 'template_rlZd5iix', data.target, 'user_0TSbTyFd1LGL6A9a8mlJM')
-        .then((result) => {
-          console.log('Wiadomość wysłana', result.status, result.text);
-          window.location.reload();
-        }, (error) => {
-          console.log('Błąd', error);
+        .then(() => {
+          swal({
+            title: 'Wiadomość została wysłana',
+            text: 'Odpowiemy najszybciej jak to możliwe',
+            icon: 'success',
+          })
+            .then(() => {
+              window.location.reload();
+            });
+        })
+        .catch((error) => {
+          console.log(error);
+          swal({
+            title: 'Wystąpił problem',
+            text: 'Wiadomość nie została wysłana',
+            icon: 'warning',
+            dangerMode: true,
+          });
         });
     },
     validate(type, value) {
