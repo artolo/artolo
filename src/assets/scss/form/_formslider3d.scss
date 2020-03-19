@@ -1,14 +1,21 @@
+@import "~@/assets/scss/database.scss";
 .form__silder3d {
   z-index: -1;
   &_slide, &_slide--hidden {
     p {
       font-size: 2rem;
-      font-weight: 200;
       color: white;
       position: absolute;
       margin-top: -30rem;
       right: 20%;
       margin-left: 25%;
+      border-radius: 20px;
+      width: 22.2rem;
+      height: 4rem;
+      padding: 0.6rem;
+      font-weight: 300;
+      background: rgb(7, 47, 95, 0.4);
+      text-shadow: 2px 1px $base-color-black;
     }
     .carousel-3d-container {
       min-height: 1px;

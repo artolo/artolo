@@ -1,0 +1,46 @@
+@import "~@/assets/scss/database";
+.componentbox__advertisement {
+  @include starter;
+  &_box{
+    text-align: right;
+    display: flex;
+    &--left {
+      display: flex;
+      flex-direction: row-reverse;
+      text-align: left;
+    }
+    &_photo {
+      margin: 3rem auto 3rem auto;
+      img {
+        width: 25rem;
+      }
+    }
+    &_content {
+      margin: 5rem auto;
+      width: 50%;
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+  @media only screen and (max-width: 850px) {
+    &_box{
+      display: block;
+      &--left {
+        display: block;
+      }
+      &_photo {
+        text-align: center;
+        img {
+          width: 70%;
+        }
+      }
+      &_content {
+        width: 100%;
+        text-align: center;
+        p {
+        }
+      }
+    }
+  }
+}

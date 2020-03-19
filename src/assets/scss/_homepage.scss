@@ -1,10 +1,7 @@
 @import "~@/assets/scss/database.scss";
 .homepage{
   &__box {
-    max-width: 1440px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    @include starter;
     &_shadows {
       width: 33%;
       display: inline-flex;

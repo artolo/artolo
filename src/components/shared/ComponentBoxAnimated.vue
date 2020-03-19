@@ -23,9 +23,10 @@ export default {
       type: String,
       required: true,
     },
-    // expresive-blue, dark-blue, navy-blue, light-grey, grey
+    // expresive-blue, dark-blue, navy-blue, light-grey, grey, white
     shadesOfBlue: {
       type: String,
+      default: 'grey',
     },
   },
 };

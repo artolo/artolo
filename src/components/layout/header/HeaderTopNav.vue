@@ -43,7 +43,7 @@ export default {
           routeName: 'homepage',
         },
         {
-          name: 'Oferta',
+          name: 'O nas',
           routeName: 'about',
         },
         /* {

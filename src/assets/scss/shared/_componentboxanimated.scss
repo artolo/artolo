@@ -41,6 +41,13 @@
       }
     }
 
+    &--gdwhite {
+      &:before {
+        background: $base-color-white;
+        background: linear-gradient(0deg, rgba(255,255,255,0.9948354341736695) 44%, rgba(235,235,235,1) 100%);
+      }
+    }
+
     &_animation {
       margin-top: -3rem;
     }
@@ -51,7 +58,7 @@
         height: 30rem;
       }
       &_animation {
-        width: 90rem;
+        width: 100%;
       }
     }
     @media only screen and (max-width: 1450px) {

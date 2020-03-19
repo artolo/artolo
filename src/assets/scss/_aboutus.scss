@@ -1,15 +1,16 @@
 @import "~@/assets/scss/database.scss";
 .aboutus {
-  max-width: 1440px;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  @include starter;
+  padding: 0 3rem;
   &__content {
+    &_shadows {
+      display: inline-flex;
+    }
     &_top {
       display: flex;
       margin-top: 37rem;
       &_avatar {
-        margin-top: 3rem;
+        margin-top: 2.5rem;
         img {
           width: 50%;
         }
@@ -25,11 +26,31 @@
           color: $base-color-grey;
         }
         p {
-          font-size: 1.7rem;
+          font-size: 1.5rem;
           text-align: left;
           font-weight: 300;
         }
       }
     }
   }
+  @media only screen and (max-width: 1000px) {
+    &__content {
+      &_top {
+        display: block;
+        &_text {
+          margin-right: auto;
+          width: 100%;
+          h4 {
+            font-size: 2rem;
+            text-align: center;
+          }
+          p {
+            font-size: 1.2rem;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
 }
+@include animatedscrollY;

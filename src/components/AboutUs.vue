@@ -13,22 +13,39 @@
         </div>
         <component-separator/>
       </section>
-      <section style="display: inline-flex; margin-bottom: 3rem">
-        <div class="aboutus__box_shadows" v-for="(item, index) in items" :key="index">
+      <section >
+        <div class="aboutus__content_shadows" v-for="(item, index) in items" :key="index">
           <component-box-shadow
             class="aboutus__content_component"
             :box-shadow-text="item.text"
             :icon="item.icon"
+            v-animatedScroll
           />
         </div>
       </section>
       <section>
-        <div class="aboutus__content_animated">
-          <component-box-animated
-            :img="'artolo-home-responsive'"
-            :shades-of-blue="'dark-blue'"
-          />
-        </div>
+        <component-box-advertisement
+          :photo-on-the-left="true"
+          :photo="2"
+          :text="resAdvertisementText"
+          :upper-text="resAdvertisement"
+        />
+      </section>
+      <section>
+      <div class="aboutus__content_animated">
+        <component-box-animated
+          :img="'artolo-home-responsive'"
+          :shades-of-blue="'gdwhite'"
+        />
+      </div>
+      </section>
+      <section>
+        <component-box-advertisement
+          :photo-on-the-left="false"
+          :text="winAdvertisementText"
+          :upper-text="winAdvertisement"
+          v-animatedScroll
+        />
       </section>
     </div>
   </div>
@@ -36,18 +53,21 @@
 
 <script>
 import ComponentBoxAnimated from '@/components/shared/ComponentBoxAnimated.vue';
+import ComponentBoxAdvertisement from '@/components/shared/ComponentBoxAdvertisement.vue';
 import ComponentBoxShadow from '@/components/shared/ComponentBoxShadow.vue';
 import ComponentSeparator from '@/components/shared/ComponentSeparator.vue';
 
 export default {
   name: 'AboutUs',
-  // eslint-disable-next-line vue/no-unused-components
   components: {
-    ComponentSeparator, ComponentBoxShadow, ComponentBoxAnimated,
+    ComponentSeparator,
+    ComponentBoxShadow,
+    ComponentBoxAdvertisement,
+    ComponentBoxAnimated,
   },
   data() {
     return {
-      topText: 'Kilka słów o nas',
+      topText: 'Lorem Ipsum',
       aboutUs: 'Nullam malesuada nunc ante. Nulla auctor purus ut cursus elementum. '
         + 'Mauris quis finibus metus. Ut ut tempor lectus. Integer varius luctus fermentum. '
         + 'Curabitur eu finibus augue. Aliquam vel fermentum mauris. Vestibulum maximus '
@@ -71,6 +91,28 @@ export default {
         + 'Morbi sollicitudin mollis diam. Sed pellentesque velit non mollis blandit.\n'
         + 'Suspendisse diam ligula, dictum et diam et, consectetureleifend enim. Nam vulputate\n'
         + 'vel neque sed tincidunt.',
+      resAdvertisement: 'Lorem Ipsum',
+      resAdvertisementText: 'Nullam malesuada nunc ante. Nulla auctor purus ut cursus elementum. '
+        + 'Mauris quis finibus metus. Ut ut tempor lectus. Integer varius luctus fermentum. '
+        + 'Curabitur eu finibus augue. Aliquam vel fermentum mauris. Vestibulum maximus '
+        + 'maximus ante, sed pretium mi sodales eu. Donec eget lacus et neque ultrices '
+        + 'malesuada. Integer sed ultrices metus.'
+        + 'Nullam malesuada nunc ante. Nulla auctor purus ut cursus elementum. '
+        + 'Mauris quis finibus metus. Ut ut tempor lectus. Integer varius luctus fermentum. '
+        + 'Curabitur eu finibus augue. Aliquam vel fermentum mauris. Vestibulum maximus '
+        + 'maximus ante, sed pretium mi sodales eu. Donec eget lacus et neque ultrices '
+        + 'malesuada. Integer sed ultrices metus.',
+      winAdvertisement: 'Lorem Ipsum',
+      winAdvertisementText: 'Nullam malesuada nunc ante. Nulla auctor purus ut cursus elementum. '
+        + 'Mauris quis finibus metus. Ut ut tempor lectus. Integer varius luctus fermentum. '
+        + 'Curabitur eu finibus augue. Aliquam vel fermentum mauris. Vestibulum maximus '
+        + 'maximus ante, sed pretium mi sodales eu. Donec eget lacus et neque ultrices '
+        + 'malesuada. Integer sed ultrices metus.'
+        + 'Nullam malesuada nunc ante. Nulla auctor purus ut cursus elementum. '
+        + 'Mauris quis finibus metus. Ut ut tempor lectus. Integer varius luctus fermentum. '
+        + 'Curabitur eu finibus augue. Aliquam vel fermentum mauris. Vestibulum maximus '
+        + 'maximus ante, sed pretium mi sodales eu. Donec eget lacus et neque ultrices '
+        + 'malesuada. Integer sed ultrices metus.',
     };
   },
 };
