@@ -5,7 +5,7 @@
     'componentbox__advertisement_box--left'">
       <div class="componentbox__advertisement_box_photo">
         <img
-          :src="require(`@/assets/img/artolo-about-${photo}.jpg`)"
+          :src="require(`@/assets/img/artolo-about-${photo}.png`)"
           :alt="`photo-about-us-${photo}`">
       </div>
       <div class="componentbox__advertisement_box_content">

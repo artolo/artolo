@@ -14,8 +14,8 @@
       height: 4rem;
       padding: 0.6rem;
       font-weight: 300;
-      background: rgb(7, 47, 95, 0.4);
-      text-shadow: 2px 1px $base-color-black;
+      background: repeating-linear-gradient(160deg, $base-color-graphite, transparent 200px);
+      text-shadow: 2px 2px $base-color-black;
     }
     .carousel-3d-container {
       min-height: 1px;

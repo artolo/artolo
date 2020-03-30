@@ -19,6 +19,12 @@ const routes = [
     name: 'portfolio',
     component: () => import('../views/ViewPortfolio.vue'),
   },
+  // other
+  {
+    path: '*',
+    name: '404',
+    component: () => import('../views/default/errors/ViewError404.vue'),
+  },
 ];
 
 const router = new VueRouter({
